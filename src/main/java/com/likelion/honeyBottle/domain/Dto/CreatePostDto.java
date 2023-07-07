@@ -1,18 +1,16 @@
 package com.likelion.honeyBottle.domain.Dto;
 
-import com.likelion.honeyBottle.domain.Comment;
+import com.likelion.honeyBottle.domain.User;
 import lombok.*;
 
-import java.util.List;
 
 @AllArgsConstructor
 @RequiredArgsConstructor
 @Getter
 @Setter
 @Builder
-public class PostDto {
-    private String post_id;
+public class CreatePostDto {
     private String title;
     private String content;
-    private List<Comment> comments;
+    private User user;
 }
