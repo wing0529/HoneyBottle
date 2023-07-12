@@ -1,9 +1,8 @@
 package com.likelion.honeyBottle.controller;
 
 import com.likelion.honeyBottle.domain.Dto.CreatePostDto;
-import com.likelion.honeyBottle.domain.Post;
+import com.likelion.honeyBottle.domain.HoneyPost;
 import com.likelion.honeyBottle.service.PostService;
-import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 public class PostController {
     private final PostService postService;
-    @PostMapping("/post/create")
+    @PostMapping("post/create")
     public String createPost(@RequestBody CreatePostDto post) throws RuntimeException{
         try{
             postService.createPost(post.getTitle(), post.getContent(), post.getUser());
@@ -22,7 +21,7 @@ public class PostController {
         }
     }
     @GetMapping("/post")
-    public Post ReadPost(@RequestParam("id")String id){
+    public HoneyPost ReadPost(@RequestParam("id")String id){
             return postService.readPost(id);
     }
 

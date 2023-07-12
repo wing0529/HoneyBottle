@@ -23,7 +23,7 @@ public class User {
     @Column
     private String password;
     @OneToMany(mappedBy = "user")
-    private List<Post> posts = new ArrayList<>();
+    private List<HoneyPost> posts = new ArrayList<>();
     @OneToMany(mappedBy = "user")
     private List<Comment> comments = new ArrayList<>();
 

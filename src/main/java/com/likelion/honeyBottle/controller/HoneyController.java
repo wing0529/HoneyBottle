@@ -1,9 +1,6 @@
 package com.likelion.honeyBottle.controller;
 
-import com.likelion.honeyBottle.domain.Dto.CreatePostDto;
-import com.likelion.honeyBottle.domain.Post;
 import com.likelion.honeyBottle.service.PostService;
-import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

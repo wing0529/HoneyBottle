@@ -9,14 +9,14 @@ import lombok.*;
 @Getter
 @Setter
 @Entity
-public class Comment {
+public class RecruitPost {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String comment_id;
     @Id
     @ManyToOne
     private HoneyPost post;
-//    @Column // 생략?
+    //    @Column // 생략?
     @JoinColumn(name = "user_id")
     @ManyToOne
     private User user;

@@ -1,6 +1,6 @@
 package com.likelion.honeyBottle.service;
 
-import com.likelion.honeyBottle.domain.Post;
+import com.likelion.honeyBottle.domain.HoneyPost;
 import com.likelion.honeyBottle.domain.User;
 import com.likelion.honeyBottle.repository.PostRepository;
 import lombok.RequiredArgsConstructor;
@@ -12,7 +12,7 @@ public class PostService {
     private final PostRepository postRepository;
 
     public void createPost(String title, String content, User user) {
-            Post post = Post.builder()
+            HoneyPost post = HoneyPost.builder()
                     .title(title)
                     .content(content)
                     .user(user)
@@ -21,8 +21,9 @@ public class PostService {
 
     }
 
-    public Post readPost(String id) {
+    public HoneyPost readPost(String id) {
         return postRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException());
+
     }
 }

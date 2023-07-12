@@ -13,7 +13,7 @@ import java.util.List;
 @Getter
 @Setter
 @Table(name = "Post")
-public class Post {
+public class HoneyPost {
     @Id
     private String post_id;
     @JoinColumn(name = "user_id")
