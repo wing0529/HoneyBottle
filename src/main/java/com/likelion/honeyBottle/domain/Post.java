@@ -19,6 +19,7 @@ public class Post {
     @JoinColumn(name = "user_id")
     @ManyToOne
     private User user;
+
     @Column
     private String title;
     @Column

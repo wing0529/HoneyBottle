@@ -16,7 +16,7 @@ public class Comment {
     @Id
     @ManyToOne
     private Post post;
-    @Column
+//    @Column // 생략?
     @JoinColumn(name = "user_id")
     @ManyToOne
     private User user;
