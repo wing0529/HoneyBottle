@@ -6,6 +6,8 @@ import com.likelion.honeyBottle.repository.PostRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 public class PostService {
@@ -24,6 +26,9 @@ public class PostService {
     public HoneyPost readPost(String id) {
         return postRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException());
+    }
 
+    public List<HoneyPost> readAllPost() {
+        return postRepository.findAll();
     }
 }

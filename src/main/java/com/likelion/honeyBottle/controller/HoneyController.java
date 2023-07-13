@@ -1,8 +1,11 @@
 package com.likelion.honeyBottle.controller;
 
+import com.likelion.honeyBottle.domain.HoneyPost;
 import com.likelion.honeyBottle.service.PostService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /* 꿀팁 게시판 관리*/
 @RestController
@@ -11,8 +14,8 @@ import org.springframework.web.bind.annotation.*;
 public class HoneyController {
     private final PostService postService;
     @GetMapping({"/part_time", ""}) // 알바 꿀통
-    public String part_time(){
-        return "part_time";
+    public List<HoneyPost> part_time(){
+        return postService.readAllPost();
     }
 
     @GetMapping("/school") // 학교 꿀통

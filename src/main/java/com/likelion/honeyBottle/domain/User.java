@@ -12,19 +12,22 @@ import java.util.List;
 @Builder
 @AllArgsConstructor
 @RequiredArgsConstructor
-@Table(name = "User")
+@Table(name = "user")
 @Entity
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String user_id;
-    @Column
-    private String id;
-    @Column
-    private String password;
-    @OneToMany(mappedBy = "user")
-    private List<HoneyPost> posts = new ArrayList<>();
-    @OneToMany(mappedBy = "user")
-    private List<Comment> comments = new ArrayList<>();
+    private Long user_id; // 유저 아이디
 
+    @Column(nullable = false)
+    private String id; // 별명?
+    @Column(nullable = false)
+    private String password;
+
+    // 유효성 검사 구현 가능
+//
+//    @OneToMany(mappedBy = "user")
+//    private List<HoneyPost> posts = new ArrayList<>();
+//    @OneToMany(mappedBy = "user")
+//    private List<Comment> comments = new ArrayList<>();
 }

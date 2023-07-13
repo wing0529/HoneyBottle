@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 /* 구인 구직 게시판 관리 */
 @RestController
 @RequiredArgsConstructor
-public class UserController {
+public class SettingController {
     private final PostService postService;
     @GetMapping({"/setting"}) // 설정
     public String setting(){
