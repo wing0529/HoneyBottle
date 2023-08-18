@@ -1,0 +1,45 @@
+홈페이지
+
+로그인 회원가입 -> 데이터 처리 안함
+
+
+소개홈 /HoneyBottle
+
+로그인 /sign_in
+회원가입 /sign_up
+
+꿀통페이지 /honey or /honey/part_time
+학교꿀통 /honey/school
+
+자취꿀통 /honey/apart
+방문꿀통 /honey/place
++post + id
+
+단기구인페이지 /job_offer or /job_offer/recruit
+지원합니다 /job_offer/apply
++post + id
+
+인기게시글페이지 /main
+
+설정 /setting
+도움 /help
+내정보 /mypage
+
+joboffer
+
+
+
+
+gradle 동작 오류 시
+-settings.gradle
+  rootProject.name = 'honeyBottle' -> rootProject.name = 'HoneyBottle' 로 변경
+
+
+mysql 8 버전 맞지 않을 시 오류 발생
+ allowPublicKeyRetrieval=true
+mysql 찾지 못할때
+ properties에 spring.jpa.properties.hibernate.dialect= org.hibernate.dialect.MySQLDialect 추가
+
+mysql 스키마 정의 명령 > CREATE SCHEMA `test_db` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin ;
+
+-외부 DBSM : aws rds 프리티어 / aws ec2
